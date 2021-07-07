@@ -6,6 +6,7 @@
 //
 
 #import "ChatViewController.h"
+#import "SelfMessageTableViewCell.h"
 
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -21,6 +22,8 @@
     self.messagesTableView.dataSource = self;
     self.messagesTableView.delegate = self;
     self.messagesTableView.tableFooterView = [UIView new];
+    
+    [self.messagesTableView registerNib:[UINib nibWithNibName:@"SelfMessageTableViewCell" bundle:nil] forCellReuseIdentifier:@"selfMessageTableViewCell"];
 }
 
 #pragma mark UITableViewDataSource
@@ -29,12 +32,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.messagesTableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [self.messagesTableView dequeueReusableCellWithIdentifier:@"selfMessageTableViewCell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[SelfMessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"selfMessageTableViewCell"];
     }
-    cell.backgroundColor = UIColor.clearColor;
-    cell.textLabel.text = @"Hello";
     return cell;
 }
 

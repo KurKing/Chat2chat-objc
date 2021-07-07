@@ -16,6 +16,10 @@
 		D2191E75268612BD009B2848 /* Chat2chat_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E74268612BD009B2848 /* Chat2chat_objcTests.m */; };
 		D2191E80268612BD009B2848 /* Chat2chat_objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
+		D29EE329268E27C700D898AB /* SelfMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE327268E27C600D898AB /* SelfMessageTableViewCell.m */; };
+		D29EE32A268E27C700D898AB /* SelfMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29EE328268E27C600D898AB /* SelfMessageTableViewCell.xib */; };
+		D29EE330268E3B1C00D898AB /* TextMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE32F268E3B1C00D898AB /* TextMessageView.m */; };
+		D29EE332268E3B4300D898AB /* TextMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D29EE331268E3B4300D898AB /* TextMessageView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,12 @@
 		D2191E81268612BD009B2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29EE31E268E022A00D898AB /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		D29EE31F268E022A00D898AB /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		D29EE326268E27C600D898AB /* SelfMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfMessageTableViewCell.h; sourceTree = "<group>"; };
+		D29EE327268E27C600D898AB /* SelfMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfMessageTableViewCell.m; sourceTree = "<group>"; };
+		D29EE328268E27C600D898AB /* SelfMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfMessageTableViewCell.xib; sourceTree = "<group>"; };
+		D29EE32E268E3B1C00D898AB /* TextMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextMessageView.h; sourceTree = "<group>"; };
+		D29EE32F268E3B1C00D898AB /* TextMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageView.m; sourceTree = "<group>"; };
+		D29EE331268E3B4300D898AB /* TextMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TextMessageView.xib; path = "Chat2chat-objc/Chat/View/MessageCells/TextMessageView/TextMessageView.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,8 @@
 		D29EE324268E264700D898AB /* MessageCells */ = {
 			isa = PBXGroup;
 			children = (
+				D29EE32D268E3AC200D898AB /* TextMessageView */,
+				D29EE32B268E27D900D898AB /* SelfMessageTableViewCell */,
 			);
 			path = MessageCells;
 			sourceTree = "<group>";
@@ -215,6 +227,26 @@
 				D2191E66268612BD009B2848 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D29EE32B268E27D900D898AB /* SelfMessageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D29EE326268E27C600D898AB /* SelfMessageTableViewCell.h */,
+				D29EE327268E27C600D898AB /* SelfMessageTableViewCell.m */,
+				D29EE328268E27C600D898AB /* SelfMessageTableViewCell.xib */,
+			);
+			path = SelfMessageTableViewCell;
+			sourceTree = "<group>";
+		};
+		D29EE32D268E3AC200D898AB /* TextMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				D29EE32E268E3B1C00D898AB /* TextMessageView.h */,
+				D29EE32F268E3B1C00D898AB /* TextMessageView.m */,
+				D29EE331268E3B4300D898AB /* TextMessageView.xib */,
+			);
+			path = TextMessageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,9 +351,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29EE332268E3B4300D898AB /* TextMessageView.xib in Resources */,
 				D2191E68268612BD009B2848 /* LaunchScreen.storyboard in Resources */,
 				D2191E65268612BD009B2848 /* Assets.xcassets in Resources */,
 				D2191E63268612B8009B2848 /* Main.storyboard in Resources */,
+				D29EE32A268E27C700D898AB /* SelfMessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2191E5A268612B8009B2848 /* AppDelegate.m in Sources */,
+				D29EE329268E27C700D898AB /* SelfMessageTableViewCell.m in Sources */,
 				D2191E6B268612BD009B2848 /* main.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,
 				D2191E5D268612B8009B2848 /* SceneDelegate.m in Sources */,
+				D29EE330268E3B1C00D898AB /* TextMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
