@@ -1,18 +1,17 @@
 //
-//  MessageCell.h
+//  SelfMessageTableViewCell.h
 //  Chat2chat-objc
 //
 //  Created by Oleksiy on 09.07.2021.
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageTableViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol MessageCell <NSObject>
+@interface SelfMessageTableViewCell : MessageTableViewCell
 
-+ (NSString*)identifier;
-- (void)setMessageText:(NSString *)text;
 
 @end
 

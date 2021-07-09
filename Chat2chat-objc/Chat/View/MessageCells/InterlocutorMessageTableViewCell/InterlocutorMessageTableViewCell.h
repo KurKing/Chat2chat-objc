@@ -6,11 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MessageCell.h"
+#import "MessageTableViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InterlocutorMessageTableViewCell : UITableViewCell <MessageCell>
+@interface InterlocutorMessageTableViewCell : MessageTableViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 
 @end
 

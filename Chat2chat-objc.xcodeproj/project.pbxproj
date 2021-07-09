@@ -19,6 +19,7 @@
 		D2270A0F2698936D00C4B262 /* SelfMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A0D2698936D00C4B262 /* SelfMessageTableViewCell.xib */; };
 		D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */; };
 		D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */; };
+		D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A192698AA1300C4B262 /* MessageTableViewCell.m */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,8 @@
 		D2270A11269897F800C4B262 /* InterlocutorMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterlocutorMessageTableViewCell.h; sourceTree = "<group>"; };
 		D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterlocutorMessageTableViewCell.m; sourceTree = "<group>"; };
 		D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterlocutorMessageTableViewCell.xib; sourceTree = "<group>"; };
-		D2270A172698991400C4B262 /* MessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		D2270A182698AA1300C4B262 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		D2270A192698AA1300C4B262 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		D29EE31E268E022A00D898AB /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		D29EE31F268E022A00D898AB /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,35 @@
 			path = "Chat2chat-objcUITests";
 			sourceTree = "<group>";
 		};
+		D2270A1B2698AE8700C4B262 /* SelfMessageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D2270A0C2698936D00C4B262 /* SelfMessageTableViewCell.m */,
+				D2270A0B2698936D00C4B262 /* SelfMessageTableViewCell.h */,
+				D2270A0D2698936D00C4B262 /* SelfMessageTableViewCell.xib */,
+			);
+			path = SelfMessageTableViewCell;
+			sourceTree = "<group>";
+		};
+		D2270A1C2698AE9000C4B262 /* InterlocutorMessageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D2270A11269897F800C4B262 /* InterlocutorMessageTableViewCell.h */,
+				D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */,
+				D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */,
+			);
+			path = InterlocutorMessageTableViewCell;
+			sourceTree = "<group>";
+		};
+		D2270A1D2698AE9800C4B262 /* Basic cell */ = {
+			isa = PBXGroup;
+			children = (
+				D2270A182698AA1300C4B262 /* MessageTableViewCell.h */,
+				D2270A192698AA1300C4B262 /* MessageTableViewCell.m */,
+			);
+			path = "Basic cell";
+			sourceTree = "<group>";
+		};
 		D29EE319268DFF6F00D898AB /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,13 +246,9 @@
 		D29EE324268E264700D898AB /* MessageCells */ = {
 			isa = PBXGroup;
 			children = (
-				D2270A0C2698936D00C4B262 /* SelfMessageTableViewCell.m */,
-				D2270A0B2698936D00C4B262 /* SelfMessageTableViewCell.h */,
-				D2270A0D2698936D00C4B262 /* SelfMessageTableViewCell.xib */,
-				D2270A11269897F800C4B262 /* InterlocutorMessageTableViewCell.h */,
-				D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */,
-				D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */,
-				D2270A172698991400C4B262 /* MessageCell.h */,
+				D2270A1B2698AE8700C4B262 /* SelfMessageTableViewCell */,
+				D2270A1C2698AE9000C4B262 /* InterlocutorMessageTableViewCell */,
+				D2270A1D2698AE9800C4B262 /* Basic cell */,
 			);
 			path = MessageCells;
 			sourceTree = "<group>";
@@ -368,6 +395,7 @@
 			files = (
 				D2191E5A268612B8009B2848 /* AppDelegate.m in Sources */,
 				D2270A0E2698936D00C4B262 /* SelfMessageTableViewCell.m in Sources */,
+				D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */,
 				D2191E6B268612BD009B2848 /* main.m in Sources */,
 				D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,

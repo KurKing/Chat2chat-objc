@@ -21,10 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    #warning TODO
+#warning TODO
     self.messages = @[
         @"1",@"12345",
-        @"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."];
+        @"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ];
     
     self.messagesTableView.dataSource = self;
     self.messagesTableView.delegate = self;
@@ -44,13 +45,13 @@
     
     if (indexPath.row < 3) {
         SelfMessageTableViewCell *cell = [self.messagesTableView dequeueReusableCellWithIdentifier: SelfMessageTableViewCell.identifier];
-
+        
         [cell setMessageText: self.messages[indexPath.row]];
         return  cell;
     }
     
     InterlocutorMessageTableViewCell *cell = [self.messagesTableView dequeueReusableCellWithIdentifier: InterlocutorMessageTableViewCell.identifier];
-
+    
     [cell setMessageText: self.messages[indexPath.row-3]];
     return cell;
 }
