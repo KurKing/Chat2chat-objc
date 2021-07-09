@@ -1,5 +1,5 @@
 //
-//  SelfMessageTableViewCell.h
+//  MessageCell.h
 //  Chat2chat-objc
 //
 //  Created by Oleksiy on 09.07.2021.
@@ -9,9 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SelfMessageTableViewCell : UITableViewCell
+@protocol MessageCell <NSObject>
 
-- (void)setMessageText:(NSString*)text;
++ (NSString*)identifier;
+- (void)setMessageText:(NSString *)text;
 
 @end
 
