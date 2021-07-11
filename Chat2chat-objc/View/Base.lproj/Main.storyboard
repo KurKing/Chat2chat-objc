@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDX-Af-NL4">
@@ -22,8 +22,37 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-rM-WMq">
                                         <rect key="frame" x="0.0" y="738" width="414" height="70"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jjd-vf-hw8">
+                                                <rect key="frame" x="15" y="8" width="334" height="40"/>
+                                                <color key="backgroundColor" name="BackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="cn0-59-8IQ"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5N-P1-zSO">
+                                                <rect key="frame" x="359" y="8.5" width="40" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LUM-fd-FbA"/>
+                                                    <constraint firstAttribute="width" constant="40" id="mFY-EM-Mpw"/>
+                                                </constraints>
+                                                <color key="tintColor" name="UnselectedBarItemColor"/>
+                                                <state key="normal" backgroundImage="paperplane.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendMessageButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgT-lg-tJQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="p5N-P1-zSO" firstAttribute="leading" secondItem="jjd-vf-hw8" secondAttribute="trailing" constant="10" id="12D-QB-8h1"/>
+                                            <constraint firstItem="jjd-vf-hw8" firstAttribute="top" secondItem="GNO-rM-WMq" secondAttribute="top" constant="8" id="6eM-fq-puP"/>
+                                            <constraint firstAttribute="trailing" secondItem="p5N-P1-zSO" secondAttribute="trailing" constant="15" id="Cdb-10-tMj"/>
+                                            <constraint firstItem="jjd-vf-hw8" firstAttribute="leading" secondItem="GNO-rM-WMq" secondAttribute="leading" constant="15" id="Oxe-ub-fcL"/>
+                                            <constraint firstItem="p5N-P1-zSO" firstAttribute="top" secondItem="GNO-rM-WMq" secondAttribute="top" constant="8" id="jL9-iY-eUB"/>
                                             <constraint firstAttribute="height" constant="70" id="y9c-GL-iNE"/>
                                         </constraints>
                                     </view>
@@ -76,6 +105,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sMU-fm-uLi"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="charView" destination="XDX-Af-NL4" id="R0m-Ji-rR9"/>
+                        <outlet property="messageTextField" destination="jjd-vf-hw8" id="9ct-N1-sUG"/>
                         <outlet property="messagesTableView" destination="i8H-eE-0Zu" id="mAY-4b-4je"/>
                     </connections>
                 </viewController>
@@ -110,8 +141,12 @@
     </scenes>
     <resources>
         <image name="chatBg" width="978" height="1440"/>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="BackgroundColor">
             <color red="0.016000000759959221" green="0.024000000208616257" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnselectedBarItemColor">
+            <color red="0.0" green="0.97600001096725464" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -11,7 +11,11 @@
 
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 
+
+@property (weak, nonatomic) IBOutlet UIView *charView;
 @property (weak, nonatomic) IBOutlet UITableView *messagesTableView;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+
 @property (strong, nonatomic) NSArray *messages;
 
 @end
@@ -34,6 +38,10 @@
     [self.messagesTableView registerNib:[UINib nibWithNibName: SelfMessageTableViewCell.identifier bundle: nil] forCellReuseIdentifier: SelfMessageTableViewCell.identifier];
     
     [self.messagesTableView registerNib:[UINib nibWithNibName: InterlocutorMessageTableViewCell.identifier bundle: nil] forCellReuseIdentifier: InterlocutorMessageTableViewCell.identifier];
+}
+
+- (IBAction)sendMessageButtonPressed {
+    NSLog(@"sendMessageButtonPressed");
 }
 
 #pragma mark UITableViewDataSource
