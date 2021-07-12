@@ -6,12 +6,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Message.h"
+#import "ChatViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChatViewModel : NSObject
 
-- (void)testVoid;
+- (void)setupWithController:(ChatViewController*)controller;
+
+- (Message*)getMessageWithIndex:(NSInteger)index;
+- (void)sendMessageWithText:(NSString*)text;
+- (void)endChat;
+
+- (NSInteger)messagesCount;
+- (BOOL)isMessagesEmpty;
 
 @end
 

@@ -22,6 +22,7 @@
 		D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A192698AA1300C4B262 /* MessageTableViewCell.m */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
 		D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */; };
+		D2E60362269CBE1600CDA8AA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E60361269CBE1600CDA8AA /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		D29EE31F268E022A00D898AB /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		D2E6035D269C7CF900CDA8AA /* ChatViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewModel.h; sourceTree = "<group>"; };
 		D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewModel.m; sourceTree = "<group>"; };
+		D2E60360269CBE1500CDA8AA /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		D2E60361269CBE1600CDA8AA /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 		D2E6035B269C7CAD00CDA8AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2E60360269CBE1500CDA8AA /* Message.h */,
+				D2E60361269CBE1600CDA8AA /* Message.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,
 				D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */,
+				D2E60362269CBE1600CDA8AA /* Message.m in Sources */,
 				D2191E5D268612B8009B2848 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
