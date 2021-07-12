@@ -12,7 +12,8 @@
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 
 
-@property (weak, nonatomic) IBOutlet UIView *charView;
+@property (weak, nonatomic) IBOutlet UIView *chatView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraintForChatView;
 @property (weak, nonatomic) IBOutlet UITableView *messagesTableView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-#warning TODO
+#warning TODO mock data
     self.messages = @[
         @"1",@"12345",
         @"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -75,11 +76,23 @@
 
 #pragma mark Keyboard
 - (void) keyboardWillShow:(NSNotification *) notification {
+    NSValue *keyboardSize = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+    if (keyboardSize == nil) { return; }
+    CGFloat heigth = [keyboardSize CGRectValue].size.height;
     
+    self.bottomConstraintForChatView.constant = heigth;
+    [self.view layoutIfNeeded];
+    
+#warning TODO: row counting
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
+    [self.messagesTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
+
 - (void) keyboardWillHide:(NSNotification *) notification {
-    
+    self.bottomConstraintForChatView.constant = 0;
+    [self.view layoutIfNeeded];
 }
+
 -(void) dissmissKeyboard:(NSNotification *) notification {
     [self.view endEditing:YES];
 }

@@ -20,8 +20,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDX-Af-NL4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBg" translatesAutoresizingMaskIntoConstraints="NO" id="A20-c6-3nW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i8H-eE-0Zu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-rM-WMq">
-                                        <rect key="frame" x="0.0" y="738" width="414" height="70"/>
+                                        <rect key="frame" x="0.0" y="748" width="414" height="60"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jjd-vf-hw8">
                                                 <rect key="frame" x="15" y="8" width="334" height="40"/>
@@ -53,41 +60,22 @@
                                             <constraint firstAttribute="trailing" secondItem="p5N-P1-zSO" secondAttribute="trailing" constant="15" id="Cdb-10-tMj"/>
                                             <constraint firstItem="jjd-vf-hw8" firstAttribute="leading" secondItem="GNO-rM-WMq" secondAttribute="leading" constant="15" id="Oxe-ub-fcL"/>
                                             <constraint firstItem="p5N-P1-zSO" firstAttribute="top" secondItem="GNO-rM-WMq" secondAttribute="top" constant="8" id="jL9-iY-eUB"/>
-                                            <constraint firstAttribute="height" constant="70" id="y9c-GL-iNE"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9j-oH-flv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBg" translatesAutoresizingMaskIntoConstraints="NO" id="A20-c6-3nW">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
-                                            </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i8H-eE-0Zu">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="i8H-eE-0Zu" secondAttribute="trailing" id="3MX-Da-emJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="A20-c6-3nW" secondAttribute="bottom" id="43X-zY-7k2"/>
-                                            <constraint firstItem="A20-c6-3nW" firstAttribute="leading" secondItem="f9j-oH-flv" secondAttribute="leading" id="AXQ-J8-eXD"/>
-                                            <constraint firstItem="A20-c6-3nW" firstAttribute="top" secondItem="f9j-oH-flv" secondAttribute="top" id="Bfh-qM-hJD"/>
-                                            <constraint firstAttribute="bottom" secondItem="i8H-eE-0Zu" secondAttribute="bottom" id="R9m-8J-uqh"/>
-                                            <constraint firstItem="i8H-eE-0Zu" firstAttribute="leading" secondItem="f9j-oH-flv" secondAttribute="leading" id="RtA-8U-lsf"/>
-                                            <constraint firstAttribute="trailing" secondItem="A20-c6-3nW" secondAttribute="trailing" id="UtY-Bz-dX4"/>
-                                            <constraint firstItem="i8H-eE-0Zu" firstAttribute="top" secondItem="f9j-oH-flv" secondAttribute="top" id="unz-gb-Zhb"/>
+                                            <constraint firstAttribute="height" constant="60" id="y9c-GL-iNE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="GNO-rM-WMq" firstAttribute="top" secondItem="f9j-oH-flv" secondAttribute="bottom" id="AQt-m1-fR4"/>
+                                    <constraint firstItem="A20-c6-3nW" firstAttribute="leading" secondItem="XDX-Af-NL4" secondAttribute="leading" id="0bD-zN-ER7"/>
                                     <constraint firstAttribute="trailing" secondItem="GNO-rM-WMq" secondAttribute="trailing" id="EfA-4w-1xn"/>
+                                    <constraint firstItem="i8H-eE-0Zu" firstAttribute="leading" secondItem="XDX-Af-NL4" secondAttribute="leading" id="FN0-mv-ndI"/>
+                                    <constraint firstAttribute="trailing" secondItem="A20-c6-3nW" secondAttribute="trailing" id="IKX-xo-nUF"/>
                                     <constraint firstItem="GNO-rM-WMq" firstAttribute="leading" secondItem="XDX-Af-NL4" secondAttribute="leading" id="KTm-e1-QPI"/>
-                                    <constraint firstItem="f9j-oH-flv" firstAttribute="top" secondItem="XDX-Af-NL4" secondAttribute="top" id="PQh-rd-sOg"/>
-                                    <constraint firstAttribute="trailing" secondItem="f9j-oH-flv" secondAttribute="trailing" id="ajD-gu-4Hd"/>
-                                    <constraint firstItem="f9j-oH-flv" firstAttribute="leading" secondItem="XDX-Af-NL4" secondAttribute="leading" id="op2-3n-dyy"/>
+                                    <constraint firstItem="GNO-rM-WMq" firstAttribute="top" secondItem="i8H-eE-0Zu" secondAttribute="bottom" id="P8C-qG-Shd"/>
+                                    <constraint firstAttribute="trailing" secondItem="i8H-eE-0Zu" secondAttribute="trailing" id="YyZ-tc-C6l"/>
+                                    <constraint firstItem="i8H-eE-0Zu" firstAttribute="top" secondItem="XDX-Af-NL4" secondAttribute="top" id="bWW-Ao-Am0"/>
+                                    <constraint firstAttribute="bottom" secondItem="A20-c6-3nW" secondAttribute="bottom" constant="60" id="o0e-rS-7RK"/>
+                                    <constraint firstItem="A20-c6-3nW" firstAttribute="top" secondItem="XDX-Af-NL4" secondAttribute="top" id="oUV-dI-7mD"/>
                                     <constraint firstAttribute="bottom" secondItem="GNO-rM-WMq" secondAttribute="bottom" id="xq3-9R-kbi"/>
                                 </constraints>
                             </view>
@@ -105,7 +93,8 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sMU-fm-uLi"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="charView" destination="XDX-Af-NL4" id="R0m-Ji-rR9"/>
+                        <outlet property="bottomConstraintForChatView" destination="xq3-9R-kbi" id="1G4-IS-5ZR"/>
+                        <outlet property="chatView" destination="XDX-Af-NL4" id="R0m-Ji-rR9"/>
                         <outlet property="messageTextField" destination="jjd-vf-hw8" id="9ct-N1-sUG"/>
                         <outlet property="messagesTableView" destination="i8H-eE-0Zu" id="mAY-4b-4je"/>
                     </connections>
