@@ -21,6 +21,7 @@
 		D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */; };
 		D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A192698AA1300C4B262 /* MessageTableViewCell.m */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
+		D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		D2270A192698AA1300C4B262 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		D29EE31E268E022A00D898AB /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		D29EE31F268E022A00D898AB /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		D2E6035D269C7CF900CDA8AA /* ChatViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewModel.h; sourceTree = "<group>"; };
+		D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				D29EE319268DFF6F00D898AB /* App */,
-				D29EE31A268DFF7700D898AB /* Chat */,
+				D2E6035B269C7CAD00CDA8AA /* Model */,
 				D29EE325268E266300D898AB /* View */,
+				D2E6035C269C7CB500CDA8AA /* ViewModel */,
 				D2191E64268612BD009B2848 /* Assets.xcassets */,
 				D2191E69268612BD009B2848 /* Info.plist */,
 			);
@@ -183,16 +187,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		D29EE31A268DFF7700D898AB /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				D29EE323268E263700D898AB /* Model */,
-				D29EE322268E263100D898AB /* View */,
-				D29EE321268E262600D898AB /* Presenter */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
 		D29EE31B268DFFB300D898AB /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,29 +214,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D29EE321268E262600D898AB /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		D29EE322268E263100D898AB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D29EE324268E264700D898AB /* MessageCells */,
-				D29EE31D268DFFD800D898AB /* Controller */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D29EE323268E263700D898AB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D29EE324268E264700D898AB /* MessageCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,10 +227,28 @@
 		D29EE325268E266300D898AB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D29EE324268E264700D898AB /* MessageCells */,
+				D29EE31D268DFFD800D898AB /* Controller */,
 				D2191E61268612B8009B2848 /* Main.storyboard */,
 				D2191E66268612BD009B2848 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D2E6035B269C7CAD00CDA8AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2E6035C269C7CB500CDA8AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2E6035D269C7CF900CDA8AA /* ChatViewModel.h */,
+				D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +388,7 @@
 				D2191E6B268612BD009B2848 /* main.m in Sources */,
 				D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,
+				D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */,
 				D2191E5D268612B8009B2848 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

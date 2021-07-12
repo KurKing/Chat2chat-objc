@@ -97,9 +97,11 @@
                         <outlet property="chatView" destination="XDX-Af-NL4" id="R0m-Ji-rR9"/>
                         <outlet property="messageTextField" destination="jjd-vf-hw8" id="9ct-N1-sUG"/>
                         <outlet property="messagesTableView" destination="i8H-eE-0Zu" id="mAY-4b-4je"/>
+                        <outlet property="viewModel" destination="ZWV-Cj-V5o" id="swp-zM-jhi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="ZWV-Cj-V5o" customClass="ChatViewModel"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>

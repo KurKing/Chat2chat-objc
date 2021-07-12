@@ -8,6 +8,7 @@
 #import "ChatViewController.h"
 #import "SelfMessageTableViewCell.h"
 #import "InterlocutorMessageTableViewCell.h"
+#import "ChatViewModel.h"
 
 @interface ChatViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -17,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *messagesTableView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 
+@property (strong, nonatomic) IBOutlet ChatViewModel *viewModel;
+
+
 @property (strong, nonatomic) NSArray *messages;
 
 @end
@@ -25,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.viewModel testVoid];
 #warning TODO mock data
     self.messages = @[
         @"1",@"12345",
