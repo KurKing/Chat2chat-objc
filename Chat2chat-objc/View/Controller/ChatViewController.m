@@ -35,10 +35,30 @@
 }
 
 - (IBAction)sendMessageButtonPressed {
-    NSLog(@"sendMessageButtonPressed");
+    
+    NSString *message = [self.messageTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if (![message isEqualToString:@""]) {
+        [self.viewModel sendMessageWithText:message];
+    }
+    
+    self.messageTextField.text = @"";
+    [self dissmissKeyboard];
+    [self scrollToLastRow];
 }
 
 #pragma mark UITableView
+- (void)reloadData {
+    [self.messagesTableView reloadData];
+}
+
+- (void)scrollToLastRow {
+    if (!self.viewModel.isMessagesEmpty) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.viewModel.messagesCount-1) inSection:0];
+        [self.messagesTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    }
+}
+
 - (void) setUpTableView {
     self.messagesTableView.dataSource = self;
     self.messagesTableView.delegate = self;
@@ -50,7 +70,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.viewModel.messagesCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,10 +108,7 @@
     self.bottomConstraintForChatView.constant = heigth;
     [self.view layoutIfNeeded];
     
-    if (!self.viewModel.isMessagesEmpty) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.viewModel.messagesCount-1) inSection:0];
-        [self.messagesTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    }
+    [self scrollToLastRow];
 }
 
 - (void) keyboardWillHide:(NSNotification *) notification {
@@ -100,6 +117,10 @@
 }
 
 - (void) dissmissKeyboard:(NSNotification *) notification {
+    [self dissmissKeyboard];
+}
+
+- (void) dissmissKeyboard {
     [self.view endEditing:YES];
 }
 

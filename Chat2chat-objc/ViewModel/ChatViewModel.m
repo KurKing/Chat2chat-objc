@@ -21,14 +21,14 @@
     self.contoller = controller;
     self.messages = [NSMutableArray new];
     
-    // TODO
-    [self.messages addObject:[[Message alloc] initWithText:@"1" messageId:@"0" type:MyMessage]];
-    [self.messages addObject:[[Message alloc] initWithText:@"12345" messageId:@"1" type:MyMessage]];
-    [self.messages addObject:[[Message alloc] initWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." messageId:@"2" type:MyMessage]];
+#warning TODO
+    [self.messages addObject:[[Message alloc] initWithText:@"1" messageId:[[NSUUID UUID] UUIDString] type:MyMessage]];
+    [self.messages addObject:[[Message alloc] initWithText:@"12345" messageId:[[NSUUID UUID] UUIDString] type:MyMessage]];
+    [self.messages addObject:[[Message alloc] initWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." messageId:[[NSUUID UUID] UUIDString] type:MyMessage]];
     
-    [self.messages addObject:[[Message alloc] initWithText:@"1" messageId:@"3" type:InterlocutorMessage]];
-    [self.messages addObject:[[Message alloc] initWithText:@"12345" messageId:@"4" type:InterlocutorMessage]];
-    [self.messages addObject:[[Message alloc] initWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." messageId:@"5" type:InterlocutorMessage]];
+    [self.messages addObject:[[Message alloc] initWithText:@"1" messageId:[[NSUUID UUID] UUIDString] type:InterlocutorMessage]];
+    [self.messages addObject:[[Message alloc] initWithText:@"12345" messageId:[[NSUUID UUID] UUIDString] type:InterlocutorMessage]];
+    [self.messages addObject:[[Message alloc] initWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." messageId:[[NSUUID UUID] UUIDString] type:InterlocutorMessage]];
 }
 
 - (BOOL)isMessagesEmpty {
@@ -45,6 +45,8 @@
 }
 
 - (void)sendMessageWithText:(NSString *)text {
+    [self.messages addObject: [[Message alloc] initWithText:text messageId:[[NSUUID UUID] UUIDString] type:MyMessage]];
+    [self.contoller reloadData];
 }
 
 - (void)endChat {
