@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype) initAsFirstMessageWithId:(NSString*) messageId;
 - (instancetype) initWithText:(NSString*) text messageId:(NSString*) messageId type:(MessageType) type;
+- (instancetype) initRandomIdMessageWithText:(NSString*) text type:(MessageType) type;
 
 @end
 

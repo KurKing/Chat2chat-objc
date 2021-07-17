@@ -103,6 +103,7 @@
 - (void) keyboardWillShow:(NSNotification *) notification {
     NSValue *keyboardSize = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
     if (keyboardSize == nil) { return; }
+    
     CGFloat heigth = [keyboardSize CGRectValue].size.height;
     
     self.bottomConstraintForChatView.constant = heigth;

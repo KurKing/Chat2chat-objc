@@ -21,6 +21,7 @@
 		D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */; };
 		D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A192698AA1300C4B262 /* MessageTableViewCell.m */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
+		D2B7F0B026A2D4660021A508 /* FirestoreChatDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B7F0AF26A2D4660021A508 /* FirestoreChatDao.m */; };
 		D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */; };
 		D2E60362269CBE1600CDA8AA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E60361269CBE1600CDA8AA /* Message.m */; };
 /* End PBXBuildFile section */
@@ -67,8 +68,12 @@
 		D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterlocutorMessageTableViewCell.xib; sourceTree = "<group>"; };
 		D2270A182698AA1300C4B262 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		D2270A192698AA1300C4B262 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		D28E969F26A2D16B005225F8 /* ChatDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatDao.h; sourceTree = "<group>"; };
+		D28E96A026A2D266005225F8 /* ChatDaoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatDaoDelegate.h; sourceTree = "<group>"; };
 		D29EE31E268E022A00D898AB /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		D29EE31F268E022A00D898AB /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		D2B7F0AE26A2D4660021A508 /* FirestoreChatDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirestoreChatDao.h; sourceTree = "<group>"; };
+		D2B7F0AF26A2D4660021A508 /* FirestoreChatDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirestoreChatDao.m; sourceTree = "<group>"; };
 		D2E6035D269C7CF900CDA8AA /* ChatViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewModel.h; sourceTree = "<group>"; };
 		D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewModel.m; sourceTree = "<group>"; };
 		D2E60360269CBE1500CDA8AA /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -100,6 +105,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D215337226A2C0A000F60D9C /* Dal */ = {
+			isa = PBXGroup;
+			children = (
+				D28E969F26A2D16B005225F8 /* ChatDao.h */,
+				D28E96A026A2D266005225F8 /* ChatDaoDelegate.h */,
+				D2B7F0AE26A2D4660021A508 /* FirestoreChatDao.h */,
+				D2B7F0AF26A2D4660021A508 /* FirestoreChatDao.m */,
+			);
+			path = Dal;
+			sourceTree = "<group>";
+		};
 		D2191E4C268612B8009B2848 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +143,7 @@
 				D2E6035B269C7CAD00CDA8AA /* Model */,
 				D29EE325268E266300D898AB /* View */,
 				D2E6035C269C7CB500CDA8AA /* ViewModel */,
+				D215337226A2C0A000F60D9C /* Dal */,
 				D2191E64268612BD009B2848 /* Assets.xcassets */,
 				D2191E69268612BD009B2848 /* Info.plist */,
 			);
@@ -391,6 +408,7 @@
 				D2270A0E2698936D00C4B262 /* SelfMessageTableViewCell.m in Sources */,
 				D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */,
 				D2191E6B268612BD009B2848 /* main.m in Sources */,
+				D2B7F0B026A2D4660021A508 /* FirestoreChatDao.m in Sources */,
 				D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,
 				D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */,

@@ -27,4 +27,13 @@
     return self;
 }
 
+- (instancetype)initRandomIdMessageWithText:(NSString *)text type:(MessageType)type {
+    if (self = [super init]) {
+        _text = text;
+        _messageId = [[NSUUID UUID] UUIDString];
+        _type = type;
+    }
+    return self;
+}
+
 @end
