@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ChatDaoDelegate.h"
+#import "Message.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)startChat;
 - (void)endChat;
-- (void)sendMessage;
+- (void)sendMessage:(Message*)message;
 
 @end
 

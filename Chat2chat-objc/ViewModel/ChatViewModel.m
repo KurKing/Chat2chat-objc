@@ -7,11 +7,14 @@
 
 #import "ChatViewModel.h"
 #import "ChatViewController.h"
+#import "ChatDao.h"
+#import "FirestoreChatDao.h"
 
 @interface ChatViewModel ()
 
 @property (strong, nonatomic) NSMutableArray* messages;
 @property (weak, nonatomic) ChatViewController* contoller;
+@property (strong, nonatomic) id<ChatDao> dao;
 
 @end
 
@@ -19,10 +22,13 @@
 
 - (void)setupWithController:(ChatViewController *)controller {
     self.contoller = controller;
+    self.dao = [[FirestoreChatDao alloc] init];
     self.messages = [NSMutableArray new];
     
     // add mock data
     [self createMessages];
+#warning test
+    [self.dao startChat];
 }
 
 - (BOOL)isMessagesEmpty {
