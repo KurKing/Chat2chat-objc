@@ -13,8 +13,8 @@
 @interface ChatViewModel ()
 
 @property (strong, nonatomic) NSMutableArray* messages;
-@property (weak, nonatomic) ChatViewController* contoller;
 @property (strong, nonatomic) id<ChatDao> dao;
+@property (weak, nonatomic) ChatViewController* contoller;
 
 @end
 
@@ -25,6 +25,8 @@
     self.dao = [[FirestoreChatDao alloc] init];
     self.dao.delegate = self;
     self.messages = [NSMutableArray new];
+    
+    [self startChat];
 }
 
 - (BOOL)isMessagesEmpty {
@@ -41,12 +43,27 @@
 }
 
 - (void)sendMessageWithText:(NSString *)text {
-    [self.messages addObject: [[Message alloc] initWithText: text  messageId:[[NSUUID UUID] UUIDString] type:MyMessage]];
-    [self.contoller reloadData];
+    Message* message = [[Message alloc] initWithText: text  messageId:[[NSUUID UUID] UUIDString] type:MyMessage];
+    [self.dao sendMessage: message];
+}
+
+- (void)startChat {
+    [self.dao startChat];
 }
 
 - (void)endChat {
     
+}
+
+#pragma mark - ChatDaoDelegate
+- (void)getNewMessage:(nonnull Message *)message {
+    [self.messages addObject: message];
+    [self.contoller reloadData];
+}
+
+- (void)chatEnded {
+    [self.messages removeAllObjects];
+    [self.contoller showDeletedChatAlert];
 }
 
 @end

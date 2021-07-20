@@ -8,15 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "Message.h"
 #import "ChatViewController.h"
+#import "ChatDaoDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatViewModel : NSObject
+@interface ChatViewModel : NSObject<ChatDaoDelegate>
 
 - (void)setupWithController:(ChatViewController*)controller;
 
 - (Message*)getMessageWithIndex:(NSInteger)index;
 - (void)sendMessageWithText:(NSString*)text;
+- (void)startChat;
 - (void)endChat;
 
 - (NSInteger)messagesCount;

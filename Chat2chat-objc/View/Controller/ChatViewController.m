@@ -47,10 +47,25 @@
     [self scrollToLastRow];
 }
 
-#pragma mark UITableView
 - (void)reloadData {
     [self.messagesTableView reloadData];
 }
+
+- (void)showDeletedChatAlert {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Your interlocutor has finished chat" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    __weak typeof(self) weakSelf = self;
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+        if (weakSelf == nil) { return; }
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.viewModel startChat];
+    }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark UITableView
 
 - (void)scrollToLastRow {
     if (!self.viewModel.isMessagesEmpty) {
@@ -74,9 +89,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        
-    Message *message = [self.viewModel getMessageWithIndex:indexPath.row];
     
+    Message *message = [self.viewModel getMessageWithIndex:indexPath.row];
     MessageTableViewCell *cell;
     
     if (message.type == MyMessage) {
@@ -84,7 +98,7 @@
     } else {
         cell = [self.messagesTableView dequeueReusableCellWithIdentifier: InterlocutorMessageTableViewCell.identifier];
     }
-
+    
     [cell setMessageText: message.text];
     
     return cell;

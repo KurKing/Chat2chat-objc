@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ChatViewController : UIViewController
 
 - (void)reloadData;
+- (void)showDeletedChatAlert;
 
 @end
 
