@@ -23,12 +23,8 @@
 - (void)setupWithController:(ChatViewController *)controller {
     self.contoller = controller;
     self.dao = [[FirestoreChatDao alloc] init];
+    self.dao.delegate = self;
     self.messages = [NSMutableArray new];
-    
-    // add mock data
-    [self createMessages];
-#warning test
-    [self.dao startChat];
 }
 
 - (BOOL)isMessagesEmpty {
@@ -51,17 +47,6 @@
 
 - (void)endChat {
     
-}
-
-// temporary
-- (void)createMessages {
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"1" type:MyMessage]];
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"12345"  type:MyMessage]];
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  type:MyMessage]];
-    
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"1"  type:InterlocutorMessage]];
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"12345"  type:InterlocutorMessage]];
-    [self.messages addObject:[[Message alloc] initRandomIdMessageWithText:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  type:InterlocutorMessage]];
 }
 
 @end

@@ -12,6 +12,7 @@
 - (instancetype)initAsFirstMessageWithId:(NSString *)messageId {
     if (self = [super init]) {
         _messageId = messageId;
+        _text = @"Chat started! Say hello to your interlocutor";
         _type = FirstMessage;
     }
     return self;

@@ -12,7 +12,9 @@
 @interface FirestoreChatDao ()
 
 @property (strong, nonatomic) FIRFirestore* db;
+@property (strong, nonatomic) id<FIRListenerRegistration> listener;
 @property (strong, nonatomic) NSString* currentChatId;
+@property (strong, nonatomic) NSString* userToken;
 
 @end
 
@@ -25,6 +27,7 @@
     self = [super init];
     if (self) {
         self.db = [FIRFirestore firestore];
+        self.userToken = [[[NSUUID alloc] init] UUIDString];
     }
     return self;
 }
@@ -78,12 +81,47 @@
     
 }
 
-- (void)sendMessage:(Message *)message {
+- (void)sendMessage:(Message*)message {
+    if (self.currentChatId == nil) { return; }
     
+    FIRDocumentReference *messageDocument = [[[[self.db collectionWithPath:@"Chats"] documentWithPath:self.currentChatId] collectionWithPath:@"Messages"] documentWithPath:message.messageId];
+        
+    [messageDocument setData:@{
+        @"text": message.text,
+        @"userToken": self.userToken,
+        @"time": [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]
+    }];
 }
 
 - (void)addListenerToChatWithId:(NSString*)chatId {
-    
+    __weak typeof(self) weakSelf = self;
+    self.listener = [[[[self.db collectionWithPath:@"Chats"] documentWithPath:chatId] collectionWithPath:@"Messages"] addSnapshotListener:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        if (snapshot == nil) { return; }
+        if (weakSelf == nil) { return; }
+        __strong typeof(self) strongSelf = weakSelf;
+        
+        for (FIRDocumentChange* diff in snapshot.documentChanges) {
+            if (diff.type == FIRDocumentChangeTypeAdded) {
+                NSDictionary<NSString *, id> *data = diff.document.data;
+                NSString* text = data[@"text"];
+                
+                MessageType type;
+                NSString* userToken = data[@"userToken"];
+                if ([userToken isEqualToString:self.userToken]) {
+                    type = MyMessage;
+                } else {
+                    type = InterlocutorMessage;
+                }
+                
+                Message* message = [[Message alloc] initWithText:text messageId:diff.document.documentID type:type];
+                
+                [strongSelf.delegate getNewMessage:message];
+            } else if (diff.type == FIRDocumentChangeTypeRemoved) {
+                [self.listener remove];
+                [self.delegate chatEnded];
+            }
+        }
+    }];
 }
 
 @end
