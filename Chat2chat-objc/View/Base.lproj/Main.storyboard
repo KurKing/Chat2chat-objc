@@ -63,6 +63,25 @@
                                             <constraint firstAttribute="height" constant="60" id="y9c-GL-iNE"/>
                                         </constraints>
                                     </view>
+                                    <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-kR-0XD">
+                                        <rect key="frame" x="125" y="387.5" width="164" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding new chat..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWl-EV-Nfw">
+                                                <rect key="frame" x="10" y="7" width="144" height="19.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="SelfMessageColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pWl-EV-Nfw" firstAttribute="leading" secondItem="sKD-kR-0XD" secondAttribute="leading" constant="10" id="8TS-Cx-HRo"/>
+                                            <constraint firstItem="pWl-EV-Nfw" firstAttribute="top" secondItem="sKD-kR-0XD" secondAttribute="top" constant="7" id="G6D-13-6tf"/>
+                                            <constraint firstAttribute="trailing" secondItem="pWl-EV-Nfw" secondAttribute="trailing" constant="10" id="MVG-pk-oaY"/>
+                                            <constraint firstAttribute="bottom" secondItem="pWl-EV-Nfw" secondAttribute="bottom" constant="7" id="aW3-BT-HY5"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -74,8 +93,10 @@
                                     <constraint firstItem="GNO-rM-WMq" firstAttribute="top" secondItem="i8H-eE-0Zu" secondAttribute="bottom" id="P8C-qG-Shd"/>
                                     <constraint firstAttribute="trailing" secondItem="i8H-eE-0Zu" secondAttribute="trailing" id="YyZ-tc-C6l"/>
                                     <constraint firstItem="i8H-eE-0Zu" firstAttribute="top" secondItem="XDX-Af-NL4" secondAttribute="top" id="bWW-Ao-Am0"/>
+                                    <constraint firstItem="sKD-kR-0XD" firstAttribute="centerY" secondItem="XDX-Af-NL4" secondAttribute="centerY" id="hna-gK-6Gj"/>
                                     <constraint firstAttribute="bottom" secondItem="A20-c6-3nW" secondAttribute="bottom" constant="60" id="o0e-rS-7RK"/>
                                     <constraint firstItem="A20-c6-3nW" firstAttribute="top" secondItem="XDX-Af-NL4" secondAttribute="top" id="oUV-dI-7mD"/>
+                                    <constraint firstItem="sKD-kR-0XD" firstAttribute="centerX" secondItem="XDX-Af-NL4" secondAttribute="centerX" id="woM-Ac-41Q"/>
                                     <constraint firstAttribute="bottom" secondItem="GNO-rM-WMq" secondAttribute="bottom" id="xq3-9R-kbi"/>
                                 </constraints>
                             </view>
@@ -95,7 +116,9 @@
                     <connections>
                         <outlet property="bottomConstraintForChatView" destination="xq3-9R-kbi" id="1G4-IS-5ZR"/>
                         <outlet property="chatView" destination="XDX-Af-NL4" id="R0m-Ji-rR9"/>
+                        <outlet property="loadingView" destination="sKD-kR-0XD" id="3aV-2g-LHQ"/>
                         <outlet property="messageTextField" destination="jjd-vf-hw8" id="9ct-N1-sUG"/>
+                        <outlet property="messageTypingView" destination="GNO-rM-WMq" id="77f-0V-Jl7"/>
                         <outlet property="messagesTableView" destination="i8H-eE-0Zu" id="mAY-4b-4je"/>
                         <outlet property="viewModel" destination="ZWV-Cj-V5o" id="swp-zM-jhi"/>
                     </connections>
@@ -135,6 +158,9 @@
         <image name="paperplane.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="BackgroundColor">
             <color red="0.016000000759959221" green="0.024000000208616257" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SelfMessageColor">
+            <color red="0.1289999932050705" green="0.030999999493360519" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="UnselectedBarItemColor">
             <color red="0.0" green="0.97600001096725464" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

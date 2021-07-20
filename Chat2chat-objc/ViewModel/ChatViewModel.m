@@ -48,6 +48,7 @@
 }
 
 - (void)startChat {
+    [self.contoller showLoadingView];
     [self.dao startChat];
 }
 
@@ -58,6 +59,7 @@
 #pragma mark - ChatDaoDelegate
 - (void)getNewMessage:(nonnull Message *)message {
     [self.messages addObject: message];
+    [self.contoller hideLoadingView];
     [self.contoller reloadData];
 }
 

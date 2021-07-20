@@ -16,6 +16,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *chatView;
+@property (weak, nonatomic) IBOutlet UIView *messageTypingView;
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraintForChatView;
 @property (weak, nonatomic) IBOutlet UITableView *messagesTableView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
@@ -32,6 +34,8 @@
     [self.viewModel setupWithController:self];
     [self setUpTableView];
     [self setUpKeyboard];
+    
+    self.loadingView.layer.cornerRadius = 7;
 }
 
 - (IBAction)sendMessageButtonPressed {
@@ -49,6 +53,16 @@
 
 - (void)reloadData {
     [self.messagesTableView reloadData];
+}
+
+- (void)showLoadingView {
+    self.messageTypingView.userInteractionEnabled = NO;
+    self.loadingView.alpha = 1;
+}
+
+- (void)hideLoadingView {
+    self.messageTypingView.userInteractionEnabled = YES;
+    self.loadingView.alpha = 0;
 }
 
 - (void)showDeletedChatAlert {
