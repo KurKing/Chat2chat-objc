@@ -5,6 +5,7 @@
 //  Created by Oleksiy on 17.07.2021.
 //
 
+#import "FirstMessageTableViewCell.h"
 #import "FirestoreChatDao.h"
 #import "Message.h"
 @import Firebase;
@@ -104,6 +105,11 @@
             if (diff.type == FIRDocumentChangeTypeAdded) {
                 NSDictionary<NSString *, id> *data = diff.document.data;
                 NSString* text = data[@"text"];
+                
+                if ([text isEqualToString:FirstMessageTableViewCell.text]) {
+                    [strongSelf.delegate getNewMessage:[[Message alloc] initAsFirstMessageWithId:diff.document.documentID]];
+                    return;
+                }
                 
                 MessageType type;
                 NSString* userToken = data[@"userToken"];

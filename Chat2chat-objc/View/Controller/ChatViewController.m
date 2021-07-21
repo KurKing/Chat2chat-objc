@@ -8,6 +8,7 @@
 #import "ChatViewController.h"
 #import "SelfMessageTableViewCell.h"
 #import "InterlocutorMessageTableViewCell.h"
+#import "FirstMessageTableViewCell.h"
 #import "MessageTableViewCell.h"
 #import "ChatViewModel.h"
 #import "Message.h"
@@ -96,6 +97,8 @@
     [self.messagesTableView registerNib:[UINib nibWithNibName: SelfMessageTableViewCell.identifier bundle: nil] forCellReuseIdentifier: SelfMessageTableViewCell.identifier];
     
     [self.messagesTableView registerNib:[UINib nibWithNibName: InterlocutorMessageTableViewCell.identifier bundle: nil] forCellReuseIdentifier: InterlocutorMessageTableViewCell.identifier];
+    
+    [self.messagesTableView registerNib:[UINib nibWithNibName: FirstMessageTableViewCell.identifier bundle: nil] forCellReuseIdentifier: FirstMessageTableViewCell.identifier];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -105,6 +108,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Message *message = [self.viewModel getMessageWithIndex:indexPath.row];
+    
+    if (message.type == FirstMessage) {
+        return [self.messagesTableView dequeueReusableCellWithIdentifier: FirstMessageTableViewCell.identifier];
+    }
+    
     MessageTableViewCell *cell;
     
     if (message.type == MyMessage) {

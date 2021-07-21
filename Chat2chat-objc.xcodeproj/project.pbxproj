@@ -18,6 +18,8 @@
 		D2191E75268612BD009B2848 /* Chat2chat_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E74268612BD009B2848 /* Chat2chat_objcTests.m */; };
 		D2191E80268612BD009B2848 /* Chat2chat_objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */; };
 		D22243C626A5A8BF000DCEEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22243C526A5A8BF000DCEEB /* GoogleService-Info.plist */; };
+		D22243CB26A833E1000DCEEB /* FirstMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22243C926A833E1000DCEEB /* FirstMessageTableViewCell.m */; };
+		D22243CC26A833E1000DCEEB /* FirstMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22243CA26A833E1000DCEEB /* FirstMessageTableViewCell.xib */; };
 		D2270A0E2698936D00C4B262 /* SelfMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A0C2698936D00C4B262 /* SelfMessageTableViewCell.m */; };
 		D2270A0F2698936D00C4B262 /* SelfMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A0D2698936D00C4B262 /* SelfMessageTableViewCell.xib */; };
 		D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */; };
@@ -71,6 +73,9 @@
 		D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat2chat_objcUITests.m; sourceTree = "<group>"; };
 		D2191E81268612BD009B2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D22243C526A5A8BF000DCEEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D22243C826A833E1000DCEEB /* FirstMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstMessageTableViewCell.h; sourceTree = "<group>"; };
+		D22243C926A833E1000DCEEB /* FirstMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstMessageTableViewCell.m; sourceTree = "<group>"; };
+		D22243CA26A833E1000DCEEB /* FirstMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstMessageTableViewCell.xib; sourceTree = "<group>"; };
 		D2270A0B2698936D00C4B262 /* SelfMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelfMessageTableViewCell.h; sourceTree = "<group>"; };
 		D2270A0C2698936D00C4B262 /* SelfMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfMessageTableViewCell.m; sourceTree = "<group>"; };
 		D2270A0D2698936D00C4B262 /* SelfMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -201,6 +206,16 @@
 			path = "Chat2chat-objcUITests";
 			sourceTree = "<group>";
 		};
+		D22243C726A83398000DCEEB /* FirstMessageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D22243C826A833E1000DCEEB /* FirstMessageTableViewCell.h */,
+				D22243C926A833E1000DCEEB /* FirstMessageTableViewCell.m */,
+				D22243CA26A833E1000DCEEB /* FirstMessageTableViewCell.xib */,
+			);
+			path = FirstMessageTableViewCell;
+			sourceTree = "<group>";
+		};
 		D2270A1B2698AE8700C4B262 /* SelfMessageTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +285,7 @@
 		D29EE324268E264700D898AB /* MessageCells */ = {
 			isa = PBXGroup;
 			children = (
+				D22243C726A83398000DCEEB /* FirstMessageTableViewCell */,
 				D2270A1B2698AE8700C4B262 /* SelfMessageTableViewCell */,
 				D2270A1C2698AE9000C4B262 /* InterlocutorMessageTableViewCell */,
 				D2270A1D2698AE9800C4B262 /* Basic cell */,
@@ -428,6 +444,7 @@
 				D2191E65268612BD009B2848 /* Assets.xcassets in Resources */,
 				D2191E63268612B8009B2848 /* Main.storyboard in Resources */,
 				D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */,
+				D22243CC26A833E1000DCEEB /* FirstMessageTableViewCell.xib in Resources */,
 				D2270A0F2698936D00C4B262 /* SelfMessageTableViewCell.xib in Resources */,
 				D22243C626A5A8BF000DCEEB /* GoogleService-Info.plist in Resources */,
 			);
@@ -580,6 +597,7 @@
 				D2191E6B268612BD009B2848 /* main.m in Sources */,
 				D2B7F0B026A2D4660021A508 /* FirestoreChatDao.m in Sources */,
 				D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */,
+				D22243CB26A833E1000DCEEB /* FirstMessageTableViewCell.m in Sources */,
 				D29EE320268E022A00D898AB /* ChatViewController.m in Sources */,
 				D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */,
 				D2E60362269CBE1600CDA8AA /* Message.m in Sources */,

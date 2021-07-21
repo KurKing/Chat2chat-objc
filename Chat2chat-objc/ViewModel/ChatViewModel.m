@@ -58,6 +58,13 @@
 
 #pragma mark - ChatDaoDelegate
 - (void)getNewMessage:(nonnull Message *)message {
+    if (message.type != FirstMessage) {
+        Message *firstMessage = self.messages[0];
+        if (firstMessage.type == FirstMessage) {
+            [self.messages removeObjectAtIndex:0];
+        }
+    }
+    
     [self.messages addObject: message];
     [self.contoller hideLoadingView];
     [self.contoller reloadData];
@@ -65,6 +72,7 @@
 
 - (void)chatEnded {
     [self.messages removeAllObjects];
+    [self.contoller reloadData];
     [self.contoller showDeletedChatAlert];
 }
 
