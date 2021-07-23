@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat started! Say hello to your interlocutor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32a-6M-8ya">
-                        <rect key="frame" x="20" y="10" width="334" height="42"/>
+                        <rect key="frame" x="30" y="10" width="314" height="42"/>
                         <color key="backgroundColor" name="SelfMessageColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="NPN-BZ-Y7H"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -32,8 +32,8 @@
                 <constraints>
                     <constraint firstItem="32a-6M-8ya" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2Wg-RQ-4Go"/>
                     <constraint firstAttribute="bottom" secondItem="32a-6M-8ya" secondAttribute="bottom" constant="7" id="XAd-Um-i0P"/>
-                    <constraint firstAttribute="trailing" secondItem="32a-6M-8ya" secondAttribute="trailing" constant="20" id="Z71-Zc-hB4"/>
-                    <constraint firstItem="32a-6M-8ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jYC-0h-AdH"/>
+                    <constraint firstAttribute="trailing" secondItem="32a-6M-8ya" secondAttribute="trailing" constant="30" id="Z71-Zc-hB4"/>
+                    <constraint firstItem="32a-6M-8ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="jYC-0h-AdH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>

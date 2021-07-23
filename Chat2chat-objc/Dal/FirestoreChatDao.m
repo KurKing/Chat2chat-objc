@@ -78,15 +78,37 @@
     }];
 }
 
-- (void)endChat { 
+- (void)endChat {
+    [self.listener remove];
+    self.listener = nil;
     
+    __weak typeof(self) weakSelf = self;
+    [[[[self.db collectionWithPath:@"Chats"]
+       documentWithPath:self.currentChatId]
+      collectionWithPath:@"Messages"]
+     getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        if (snapshot == nil) { return; }
+        if (weakSelf == nil) { return; }
+        __strong typeof(self) strongSelf = weakSelf;
+        
+        for (FIRQueryDocumentSnapshot* document in snapshot.documents) {
+            [[[[[strongSelf.db collectionWithPath:@"Chats"]
+                documentWithPath:self.currentChatId]
+               collectionWithPath:@"Messages"]
+              documentWithPath:document.documentID]
+             deleteDocument];
+        }
+    }];
+    
+    [[[self.db collectionWithPath:@"Chats"]
+      documentWithPath:self.currentChatId] deleteDocument];
 }
 
 - (void)sendMessage:(Message*)message {
     if (self.currentChatId == nil) { return; }
     
     FIRDocumentReference *messageDocument = [[[[self.db collectionWithPath:@"Chats"] documentWithPath:self.currentChatId] collectionWithPath:@"Messages"] documentWithPath:message.messageId];
-        
+    
     [messageDocument setData:@{
         @"text": message.text,
         @"userToken": self.userToken,

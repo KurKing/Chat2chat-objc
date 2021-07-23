@@ -53,7 +53,12 @@
 }
 
 - (void)endChat {
+    [self.contoller showLoadingView];
     
+    [self.dao endChat];
+    
+    [self.messages removeAllObjects];
+    [self.contoller reloadData];
 }
 
 #pragma mark - ChatDaoDelegate
@@ -68,6 +73,8 @@
     [self.messages addObject: message];
     [self.contoller hideLoadingView];
     [self.contoller reloadData];
+    
+    [self.contoller scrollToLastRow];
 }
 
 - (void)chatEnded {

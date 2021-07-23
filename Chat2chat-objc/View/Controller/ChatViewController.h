@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadData;
 - (void)showDeletedChatAlert;
+- (void)scrollToLastRow;
 - (void)showLoadingView;
 - (void)hideLoadingView;
 

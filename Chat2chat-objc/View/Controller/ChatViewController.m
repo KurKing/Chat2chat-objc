@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraintForChatView;
 @property (weak, nonatomic) IBOutlet UITableView *messagesTableView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *reloadButton;
 
 @property (strong, nonatomic) IBOutlet ChatViewModel *viewModel;
 
@@ -52,6 +53,12 @@
     [self scrollToLastRow];
 }
 
+- (IBAction)findNewChatButtonPressed:(UIBarButtonItem *)sender {
+    self.reloadButton.enabled = NO;
+    [self.viewModel endChat];
+    [self.viewModel startChat];
+}
+
 - (void)reloadData {
     [self.messagesTableView reloadData];
 }
@@ -64,6 +71,7 @@
 - (void)hideLoadingView {
     self.messageTypingView.userInteractionEnabled = YES;
     self.loadingView.alpha = 0;
+    self.reloadButton.enabled = YES;
 }
 
 - (void)showDeletedChatAlert {

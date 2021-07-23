@@ -111,7 +111,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat2chat" id="eYp-bS-TT1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sMU-fm-uLi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="gxl-yB-ZoQ">
+                            <color key="tintColor" name="UnselectedBarItemColor"/>
+                            <connections>
+                                <action selector="findNewChatButtonPressed:" destination="BYZ-38-t0r" id="eou-N5-ll4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomConstraintForChatView" destination="xq3-9R-kbi" id="1G4-IS-5ZR"/>
