@@ -100,3 +100,5 @@ fastlane/test_output
 iOSInjectionProject/
 *.mlmodel
 
+GoogleService-Info.plist
+Podfile.lock

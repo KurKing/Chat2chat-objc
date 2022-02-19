@@ -21,6 +21,7 @@
 		D2270A14269897F800C4B262 /* InterlocutorMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A12269897F800C4B262 /* InterlocutorMessageTableViewCell.m */; };
 		D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */; };
 		D2270A1A2698AA1300C4B262 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A192698AA1300C4B262 /* MessageTableViewCell.m */; };
+		D26988CD27C1A53B0057956F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D26988CC27C1A53B0057956F /* GoogleService-Info.plist */; };
 		D29EE320268E022A00D898AB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29EE31F268E022A00D898AB /* ChatViewController.m */; };
 		D2B7F0B026A2D4660021A508 /* FirestoreChatDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B7F0AF26A2D4660021A508 /* FirestoreChatDao.m */; };
 		D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */; };
@@ -55,6 +56,7 @@
 		D2270A13269897F800C4B262 /* InterlocutorMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterlocutorMessageTableViewCell.xib; sourceTree = "<group>"; };
 		D2270A182698AA1300C4B262 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		D2270A192698AA1300C4B262 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		D26988CC27C1A53B0057956F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D28E969F26A2D16B005225F8 /* ChatDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatDao.h; sourceTree = "<group>"; };
 		D28E96A026A2D266005225F8 /* ChatDaoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatDaoDelegate.h; sourceTree = "<group>"; };
 		D29EE31E268E022A00D898AB /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D2E6035C269C7CB500CDA8AA /* ViewModel */,
 				D215337226A2C0A000F60D9C /* Dal */,
 				D2191E64268612BD009B2848 /* Assets.xcassets */,
+				D26988CC27C1A53B0057956F /* GoogleService-Info.plist */,
 				D2191E69268612BD009B2848 /* Info.plist */,
 			);
 			path = "Chat2chat-objc";
@@ -328,6 +331,7 @@
 				D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */,
 				D22243CC26A833E1000DCEEB /* FirstMessageTableViewCell.xib in Resources */,
 				D2270A0F2698936D00C4B262 /* SelfMessageTableViewCell.xib in Resources */,
+				D26988CD27C1A53B0057956F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
