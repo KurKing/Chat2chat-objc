@@ -6,13 +6,4 @@ target 'Chat2chat-objc' do
 
   pod 'Firebase/Firestore'
 
-  target 'Chat2chat-objcTests' do
-    inherit! :search_paths
-    pod 'Firebase/Firestore'
-  end
-
-  target 'Chat2chat-objcUITests' do
-    pod 'Firebase/Firestore'
-  end
-
 end

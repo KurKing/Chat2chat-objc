@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		715D652948E53B5AAE34B288 /* Pods_Chat2chat_objcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9650D2E933BF85646D0E9DF5 /* Pods_Chat2chat_objcTests.framework */; };
 		CA7691485C96032B63D57C03 /* Pods_Chat2chat_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E3FE43957F489957B91C56 /* Pods_Chat2chat_objc.framework */; };
 		D2191E5A268612B8009B2848 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E59268612B8009B2848 /* AppDelegate.m */; };
 		D2191E5D268612B8009B2848 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E5C268612B8009B2848 /* SceneDelegate.m */; };
@@ -15,9 +14,6 @@
 		D2191E65268612BD009B2848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2191E64268612BD009B2848 /* Assets.xcassets */; };
 		D2191E68268612BD009B2848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2191E66268612BD009B2848 /* LaunchScreen.storyboard */; };
 		D2191E6B268612BD009B2848 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E6A268612BD009B2848 /* main.m */; };
-		D2191E75268612BD009B2848 /* Chat2chat_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E74268612BD009B2848 /* Chat2chat_objcTests.m */; };
-		D2191E80268612BD009B2848 /* Chat2chat_objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */; };
-		D22243C626A5A8BF000DCEEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D22243C526A5A8BF000DCEEB /* GoogleService-Info.plist */; };
 		D22243CB26A833E1000DCEEB /* FirstMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22243C926A833E1000DCEEB /* FirstMessageTableViewCell.m */; };
 		D22243CC26A833E1000DCEEB /* FirstMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22243CA26A833E1000DCEEB /* FirstMessageTableViewCell.xib */; };
 		D2270A0E2698936D00C4B262 /* SelfMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2270A0C2698936D00C4B262 /* SelfMessageTableViewCell.m */; };
@@ -29,25 +25,7 @@
 		D2B7F0B026A2D4660021A508 /* FirestoreChatDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B7F0AF26A2D4660021A508 /* FirestoreChatDao.m */; };
 		D2E6035F269C7CF900CDA8AA /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E6035E269C7CF900CDA8AA /* ChatViewModel.m */; };
 		D2E60362269CBE1600CDA8AA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E60361269CBE1600CDA8AA /* Message.m */; };
-		ECAAFCF2FB62FAAEEB107531 /* Pods_Chat2chat_objc_Chat2chat_objcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9EA0322097F628E086697 /* Pods_Chat2chat_objc_Chat2chat_objcUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D2191E71268612BD009B2848 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2191E4D268612B8009B2848 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2191E54268612B8009B2848;
-			remoteInfo = "Chat2chat-objc";
-		};
-		D2191E7C268612BD009B2848 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2191E4D268612B8009B2848 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2191E54268612B8009B2848;
-			remoteInfo = "Chat2chat-objc";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8B7649A86F96D62A36BA3319 /* Pods-Chat2chat-objcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat2chat-objcTests.debug.xcconfig"; path = "Target Support Files/Pods-Chat2chat-objcTests/Pods-Chat2chat-objcTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,13 +44,6 @@
 		D2191E67268612BD009B2848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2191E69268612BD009B2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2191E6A268612BD009B2848 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D2191E70268612BD009B2848 /* Chat2chat-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chat2chat-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2191E74268612BD009B2848 /* Chat2chat_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat2chat_objcTests.m; sourceTree = "<group>"; };
-		D2191E76268612BD009B2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2191E7B268612BD009B2848 /* Chat2chat-objcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chat2chat-objcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chat2chat_objcUITests.m; sourceTree = "<group>"; };
-		D2191E81268612BD009B2848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D22243C526A5A8BF000DCEEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D22243C826A833E1000DCEEB /* FirstMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstMessageTableViewCell.h; sourceTree = "<group>"; };
 		D22243C926A833E1000DCEEB /* FirstMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstMessageTableViewCell.m; sourceTree = "<group>"; };
 		D22243CA26A833E1000DCEEB /* FirstMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -108,22 +79,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2191E6D268612BD009B2848 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				715D652948E53B5AAE34B288 /* Pods_Chat2chat_objcTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2191E78268612BD009B2848 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ECAAFCF2FB62FAAEEB107531 /* Pods_Chat2chat_objc_Chat2chat_objcUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -155,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				D2191E57268612B8009B2848 /* Chat2chat-objc */,
-				D2191E73268612BD009B2848 /* Chat2chat-objcTests */,
-				D2191E7E268612BD009B2848 /* Chat2chat-objcUITests */,
 				D2191E56268612B8009B2848 /* Products */,
 				35FF3230A161AAFF6FA64873 /* Pods */,
 				F1B7D58DD0FD9DD9D3DD7453 /* Frameworks */,
@@ -167,8 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				D2191E55268612B8009B2848 /* Chat2chat-objc.app */,
-				D2191E70268612BD009B2848 /* Chat2chat-objcTests.xctest */,
-				D2191E7B268612BD009B2848 /* Chat2chat-objcUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,28 +133,9 @@
 				D2E6035C269C7CB500CDA8AA /* ViewModel */,
 				D215337226A2C0A000F60D9C /* Dal */,
 				D2191E64268612BD009B2848 /* Assets.xcassets */,
-				D22243C526A5A8BF000DCEEB /* GoogleService-Info.plist */,
 				D2191E69268612BD009B2848 /* Info.plist */,
 			);
 			path = "Chat2chat-objc";
-			sourceTree = "<group>";
-		};
-		D2191E73268612BD009B2848 /* Chat2chat-objcTests */ = {
-			isa = PBXGroup;
-			children = (
-				D2191E74268612BD009B2848 /* Chat2chat_objcTests.m */,
-				D2191E76268612BD009B2848 /* Info.plist */,
-			);
-			path = "Chat2chat-objcTests";
-			sourceTree = "<group>";
-		};
-		D2191E7E268612BD009B2848 /* Chat2chat-objcUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D2191E7F268612BD009B2848 /* Chat2chat_objcUITests.m */,
-				D2191E81268612BD009B2848 /* Info.plist */,
-			);
-			path = "Chat2chat-objcUITests";
 			sourceTree = "<group>";
 		};
 		D22243C726A83398000DCEEB /* FirstMessageTableViewCell */ = {
@@ -354,46 +286,6 @@
 			productReference = D2191E55268612B8009B2848 /* Chat2chat-objc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D2191E6F268612BD009B2848 /* Chat2chat-objcTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2191E87268612BD009B2848 /* Build configuration list for PBXNativeTarget "Chat2chat-objcTests" */;
-			buildPhases = (
-				5B98148C9C8B4E2F053811A5 /* [CP] Check Pods Manifest.lock */,
-				D2191E6C268612BD009B2848 /* Sources */,
-				D2191E6D268612BD009B2848 /* Frameworks */,
-				D2191E6E268612BD009B2848 /* Resources */,
-				2E2A03EF4A48D09D64CB8EC6 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2191E72268612BD009B2848 /* PBXTargetDependency */,
-			);
-			name = "Chat2chat-objcTests";
-			productName = "Chat2chat-objcTests";
-			productReference = D2191E70268612BD009B2848 /* Chat2chat-objcTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D2191E7A268612BD009B2848 /* Chat2chat-objcUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2191E8A268612BD009B2848 /* Build configuration list for PBXNativeTarget "Chat2chat-objcUITests" */;
-			buildPhases = (
-				6779FEB5855D5CFF5222F40E /* [CP] Check Pods Manifest.lock */,
-				D2191E77268612BD009B2848 /* Sources */,
-				D2191E78268612BD009B2848 /* Frameworks */,
-				D2191E79268612BD009B2848 /* Resources */,
-				5220AA933C61046B025DED96 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2191E7D268612BD009B2848 /* PBXTargetDependency */,
-			);
-			name = "Chat2chat-objcUITests";
-			productName = "Chat2chat-objcUITests";
-			productReference = D2191E7B268612BD009B2848 /* Chat2chat-objcUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -404,14 +296,6 @@
 				TargetAttributes = {
 					D2191E54268612B8009B2848 = {
 						CreatedOnToolsVersion = 12.5.1;
-					};
-					D2191E6F268612BD009B2848 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = D2191E54268612B8009B2848;
-					};
-					D2191E7A268612BD009B2848 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = D2191E54268612B8009B2848;
 					};
 				};
 			};
@@ -429,8 +313,6 @@
 			projectRoot = "";
 			targets = (
 				D2191E54268612B8009B2848 /* Chat2chat-objc */,
-				D2191E6F268612BD009B2848 /* Chat2chat-objcTests */,
-				D2191E7A268612BD009B2848 /* Chat2chat-objcUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,105 +328,12 @@
 				D2270A15269897F800C4B262 /* InterlocutorMessageTableViewCell.xib in Resources */,
 				D22243CC26A833E1000DCEEB /* FirstMessageTableViewCell.xib in Resources */,
 				D2270A0F2698936D00C4B262 /* SelfMessageTableViewCell.xib in Resources */,
-				D22243C626A5A8BF000DCEEB /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2191E6E268612BD009B2848 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2191E79268612BD009B2848 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E2A03EF4A48D09D64CB8EC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objcTests/Pods-Chat2chat-objcTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objcTests/Pods-Chat2chat-objcTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objcTests/Pods-Chat2chat-objcTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5220AA933C61046B025DED96 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objc-Chat2chat-objcUITests/Pods-Chat2chat-objc-Chat2chat-objcUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objc-Chat2chat-objcUITests/Pods-Chat2chat-objc-Chat2chat-objcUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chat2chat-objc-Chat2chat-objcUITests/Pods-Chat2chat-objc-Chat2chat-objcUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B98148C9C8B4E2F053811A5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chat2chat-objcTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6779FEB5855D5CFF5222F40E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chat2chat-objc-Chat2chat-objcUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8804D0CE96CA23B8958542AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,36 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2191E6C268612BD009B2848 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2191E75268612BD009B2848 /* Chat2chat_objcTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2191E77268612BD009B2848 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2191E80268612BD009B2848 /* Chat2chat_objcUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D2191E72268612BD009B2848 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2191E54268612B8009B2848 /* Chat2chat-objc */;
-			targetProxy = D2191E71268612BD009B2848 /* PBXContainerItemProxy */;
-		};
-		D2191E7D268612BD009B2848 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2191E54268612B8009B2848 /* Chat2chat-objc */;
-			targetProxy = D2191E7C268612BD009B2848 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2191E61268612B8009B2848 /* Main.storyboard */ = {
@@ -806,86 +566,6 @@
 			};
 			name = Release;
 		};
-		D2191E88268612BD009B2848 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B7649A86F96D62A36BA3319 /* Pods-Chat2chat-objcTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUJ73BXL42;
-				INFOPLIST_FILE = "Chat2chat-objcTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kurking.Chat2chat-objcTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chat2chat-objc.app/Chat2chat-objc";
-			};
-			name = Debug;
-		};
-		D2191E89268612BD009B2848 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D685D71E58C48CB5AF0E07 /* Pods-Chat2chat-objcTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUJ73BXL42;
-				INFOPLIST_FILE = "Chat2chat-objcTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kurking.Chat2chat-objcTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chat2chat-objc.app/Chat2chat-objc";
-			};
-			name = Release;
-		};
-		D2191E8B268612BD009B2848 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9532F6E86748D1CC2862040D /* Pods-Chat2chat-objc-Chat2chat-objcUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUJ73BXL42;
-				INFOPLIST_FILE = "Chat2chat-objcUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kurking.Chat2chat-objcUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Chat2chat-objc";
-			};
-			name = Debug;
-		};
-		D2191E8C268612BD009B2848 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6637C9261C9D00D0BB6DA00 /* Pods-Chat2chat-objc-Chat2chat-objcUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CUJ73BXL42;
-				INFOPLIST_FILE = "Chat2chat-objcUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kurking.Chat2chat-objcUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Chat2chat-objc";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -903,24 +583,6 @@
 			buildConfigurations = (
 				D2191E85268612BD009B2848 /* Debug */,
 				D2191E86268612BD009B2848 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2191E87268612BD009B2848 /* Build configuration list for PBXNativeTarget "Chat2chat-objcTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2191E88268612BD009B2848 /* Debug */,
-				D2191E89268612BD009B2848 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2191E8A268612BD009B2848 /* Build configuration list for PBXNativeTarget "Chat2chat-objcUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2191E8B268612BD009B2848 /* Debug */,
-				D2191E8C268612BD009B2848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
